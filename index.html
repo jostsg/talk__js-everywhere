@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>JS.everywhere();</title>
+	
+	<link href="slideshow.css" rel="stylesheet" />
+	<link href="theme.css" rel="stylesheet" />
+	<link href="talk.css" rel="stylesheet" />
+	<script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="20">
+
+<section>
+	<header id="intro" class="slide">
+		<h1><strong>JS</strong>.everywhere();</h1>
+	</header>
+</section>
+
+<section>
+	<header class="slide jik"></header>
+
+	<header class="slide">
+		<h1>rule of <strong>least power</strong></h1>
+		<div class="presenter-notes">
+			<ul>
+				<li>find tools that can do the job, and then take the easiest</li>
+			</ul>
+		</div>
+	</header>
+
+	<section class="slide">
+		<h2>atwood's law</h2>
+		<div class="quote">
+			<div class="text">
+				Any application that can be written in <strong>JavaScript</strong>, will eventually be written in <strong>JavaScript</strong>.
+			</div>
+			<div class="person">
+				Jeff Atwood
+			</div>
+		</div>
+	</section>
+
+	<header class="slide">
+		<h1>browser</h1>
+		<div class="presenter-notes">
+			<ul>
+				<li>the browser speaks only one language, so you will learn it</li>
+				<li>no compile process, just start in the console</li>
+				<li>everybody has one, no installation required</li>
+				<li>now we just write everything in javascript, but...</li>
+			</ul>
+		</div>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>SEO</h1>
+	</header>
+
+	<header class="slide">
+		<h1><strong>shared</strong> code</h1>
+	</header>
+
+	<section class="slide">
+		<h2>node.js</h2>
+		<div class="quote delayed">
+			<div class="text">
+				Just run the code through Node.js!
+			</div>
+			<div class="person">
+				Me
+			</div>
+		</div>
+	</section>
+</section>
+
+<section>
+	<header class="slide accident"></header>
+
+	<header class="slide">
+		<h1><strong>api</strong>s</h1>
+	</header>
+
+	<section class="slide">
+		<h2>browser <strong>api</strong>s</h2>
+		<ul>
+			<li class="delayed">XHR</li>
+			<li class="delayed">History API</li>
+			<li class="delayed">DOM</li>
+		</ul>
+	</section>
+</section>
+
+<section>
+	<header class="slide slow">
+		<h1 class="delayed">server-side <strong>dom</strong></h1>
+	</header>
+	
+	<section class="slide">
+	    <h2>server-side <strong>dom</strong></h2>
+	    <ul>
+	        <li>Cheerio: <a href="https://github.com/MatthewMueller/cheerio">https://github.com/MatthewMueller/cheerio</a></li>
+	        <li>Domino: <a href="https://github.com/fgnass/domino">https://github.com/fgnass/domino</a></li>
+	        <li>jsdom: <a href="https://github.com/tmpvar/jsdom">https://github.com/tmpvar/jsdom</a></li>
+	        <li>PhantomJS: <a href="http://phantomjs.org/">http://phantomjs.org/</a></li>
+	    </ul>
+	</section>
+</section>
+
+<section>
+    <header class="slide">
+        <h1>build a <strong>framework</strong></h1>
+    </header>
+
+    <header class="architecture slide"></header>
+</section>
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+	new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+	new CSSControl(cssControls[i]);
+}
+</script>
+	
+</body>
+</html>

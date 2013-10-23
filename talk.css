@@ -1,0 +1,74 @@
+html {
+    /*background-image: -webkit-radial-gradient(bottom, rgb(241,71,61), rgb(255,100,92));*/
+    /*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2F2727), to(#1a82f7));*/
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+}
+
+section > header.chapter {
+    background: none;
+    color: #000;
+    background-color: #fff;
+}
+
+.jik {
+    background: url('img/jik.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+.accident {
+    background: url('img/accident2.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+.laughing {
+    background: url('img/laughing.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+.architecture {
+    background: url('img/architecture.png') no-repeat center center fixed;
+    -webkit-background-size: contain;
+}
+
+.slow {
+    background: url('img/slow.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+    .slow > h1 {
+        background: rgba(0,0,0,.9);
+    }
+
+.quote {
+    background:rgba(0,0,0,.4);
+    color: #c3c3c3;
+}
+
+    .quote .text {
+        width: 98%;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .quote .text:before {
+        content: "\"";
+    }
+
+    .quote .text:after {
+        content: "\"";
+    }
+
+    .quote .person {
+        width: 98%;
+        font-style: italic;
+        text-align: right;
+    }
+
+    .quote .person:before {
+        content: "- ";
+    };
