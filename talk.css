@@ -1,5 +1,6 @@
 html {
     background-image: -webkit-radial-gradient(bottom, rgb(241,71,61), rgb(255,100,92));
+    -webkit-background-size: cover;
     /*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2F2727), to(#1a82f7));*/
     /*background:
     radial-gradient(black 15%, transparent 16%) 0 0,
@@ -82,7 +83,7 @@ section > header.chapter {
         bottom: 0;
     }
 
-.slow > h1, .browser > h1, .share > h1, .demo > h1 {
+.slow > h1, .browser > h1, .share > h1, .demo > h1, .google > h1 {
     background: rgba(0,0,0,.9);
     color: #fff;
 }
