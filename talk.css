@@ -1,13 +1,13 @@
 html {
-    /*background-image: -webkit-radial-gradient(bottom, rgb(241,71,61), rgb(255,100,92));*/
+    background-image: -webkit-radial-gradient(bottom, rgb(241,71,61), rgb(255,100,92));
     /*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2F2727), to(#1a82f7));*/
-    background:
+    /*background:
     radial-gradient(black 15%, transparent 16%) 0 0,
     radial-gradient(black 15%, transparent 16%) 8px 8px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color:#282828;
-    background-size:16px 16px;
+    background-size:16px 16px;*/
 }
 
 section > header.chapter {
@@ -36,16 +36,60 @@ section > header.chapter {
     -webkit-background-size: contain;
 }
 
+.browser {
+    background: url('img/browser.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    color: #fff;
+}
+
+.google {
+    background: url('img/google.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    color: #fff;
+}
+
+.library {
+    background: url('img/library.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+.demo {
+    background: url('img/demo.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+.share {
+    background: url('img/sharing.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
 .slow {
     background: url('img/slow.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
 }
-    .slow > h1 {
-        background: rgba(0,0,0,.9);
+
+.power {
+    background: url('img/power.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+    section > header.power > h1 {
+        color: #fff;
+        position: absolute;
+        top: auto;
+        left: auto;
+        margin: 0;
+        right: 0;
+        bottom: 0;
     }
 
+.slow > h1, .browser > h1, .share > h1, .demo > h1 {
+    background: rgba(0,0,0,.9);
+    color: #fff;
+}
+
 .quote {
-    background:rgba(0,0,0,.4);
+    margin-top: 10%;
+    background:rgba(0,0,0,.8);
     color: #c3c3c3;
 }
 
@@ -71,4 +115,8 @@ section > header.chapter {
 
     .quote .person:before {
         content: "- ";
-    };
+    }
+
+.erase {
+    text-decoration: line-through;
+}

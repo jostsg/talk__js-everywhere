@@ -21,7 +21,7 @@
 <section>
 	<header class="slide jik"></header>
 
-	<header class="slide">
+	<header class="slide power">
 		<h1>rule of <strong>least power</strong></h1>
 		<div class="presenter-notes">
 			<ul>
@@ -30,8 +30,7 @@
 		</div>
 	</header>
 
-	<section class="slide">
-		<h2>atwood's law</h2>
+	<section class="slide library">
 		<div class="quote">
 			<div class="text">
 				Any application that can be written in <strong>JavaScript</strong>, will eventually be written in <strong>JavaScript</strong>.
@@ -42,7 +41,7 @@
 		</div>
 	</section>
 
-	<header class="slide">
+	<header class="slide browser">
 		<h1>browser</h1>
 		<div class="presenter-notes">
 			<ul>
@@ -56,17 +55,15 @@
 </section>
 
 <section>
-	<header class="slide">
-		<h1>SEO</h1>
+	<header class="slide google">
 	</header>
 
-	<header class="slide">
-		<h1><strong>shared</strong> code</h1>
+	<header class="slide share">
+		<h1 class="delayed">code</h1>
 	</header>
 
-	<section class="slide">
-		<h2>node.js</h2>
-		<div class="quote delayed">
+	<section class="slide library">
+		<div class="quote">
 			<div class="text">
 				Just run the code through Node.js!
 			</div>
@@ -112,10 +109,166 @@
 
 <section>
     <header class="slide">
-        <h1>build a <strong>framework</strong></h1>
+        <h1>design a <strong>framework</strong></h1>
     </header>
 
     <header class="architecture slide"></header>
+
+    <section class="slide">
+        <h2>Core</h2>
+        <pre><code lang="javascript">{
+    module: function () {
+        /* inject sandbox */
+    },
+    templates: function () {
+        /* register templates */
+    },
+    run: function () { /* start */ }
+}</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Sandbox</h2>
+        <pre><code lang="javascript">{
+    router: { /* Router */ },
+
+    templates: { /* Templates */ },
+
+    http: { /* Http */ }
+}</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>App</h2>
+        <pre><code lang="javascript">function MyApp ( framework ) {
+    framework.module( myModule );
+}
+
+function myModule ( sandbox ) {
+    // code...
+}</code></pre>
+    </section> 
+</section>
+
+<section>
+	    <section class="slide">
+        <h2>Differences Core</h2>
+        <pre><code lang="javascript">// server
+function module ( module ) {
+    var sandbox = /* sandbox server */;
+    module( sandbox );
+}</code></pre>
+        <pre><code lang="javascript">// browser
+function module ( module ) {
+    var sandbox = /* sandbox browser */;
+    module( sandbox );
+}</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Differences Core</h2>
+        <pre><code lang="javascript">// server
+function templates ( templatesDir ) {
+    // load files
+    // compile templates
+    // store
+    // setup access point for browser
+}</code></pre>
+        <pre><code lang="javascript">// no browser implementation</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Differences Core</h2>
+        <pre><code lang="javascript">// server
+function run ( port ) {
+    // start server
+    server.listen( port || 3000 );
+}</code></pre>
+        <pre><code lang="javascript">// browser
+function run () {
+    // start page.js routing
+    page();
+}</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Differences Sandbox</h2>
+        <pre><code lang="javascript">// server
+router.get = function ( pattern, callback ) {
+    // register callback on express.js
+    server.get( pattern, /* normalize callback */ )
+};
+</code></pre>
+        <pre><code lang="javascript">// browser
+router.get = function ( pattern, callback ) {
+    // register callback on page.js
+    page( pattern, /* normalize callback */ );
+};</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Differences Sandbox</h2>
+        <pre><code lang="javascript">// server
+templates.render = function ( name, data ) {
+    var template = templates[ name ];
+    html = template( data ); // used when done()
+};
+</code></pre>
+        <pre><code lang="javascript">// browser
+templates.render = function ( name, data ) {
+    $.post( /* ... */ ).done( function ( html ) {
+        $( "#view" ).html( html )
+    });
+};</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2>Differences Sandbox</h2>
+        <pre><code lang="javascript">// server
+http.get = function ( url, callback ) {
+    nodeHttp.get( url, function( res ) {
+        var data = "";
+        res.on( "data", function ( _data ) {
+            data += _data
+        });
+        res.on( "end", function () {
+            callback( null, data );
+        });
+    });
+};</code></pre>
+
+    </section>
+
+    <section class="slide">
+        <h2>differences <strong>sandbox</strong></h2>
+        <pre><code lang="javascript">// browser
+http.get = function ( url, callback ) {
+    $.get( url ).done( function ( data ) {
+        callback( null, data );
+    });
+};</code></pre>
+        <ul class="presenter-notes">
+            <li>Summarize: Abstractions on Sandbox to pass to an App</li>
+            <li>Framework already exists - TwoFace only for this purpose</li>
+            <li>Give a rough overview of the implementation</li>
+            <li>Mention other solutions, like Rendr &amp; Tready.js</li>
+        </ul>
+    </section>
+
+    <header class="slide">
+		<h1>differences <strong>module</strong></h1>
+    </header>
+
+    <header class="slide">
+		<h1><span class="erase">differences</span> <strong>module</strong></h1>
+    </header>
+
+</section>
+
+<section>
+	<header class="slide demo">
+		<h1>demo</h1>
+	</header>
 </section>
 
 <script src="slideshow.js"></script>

@@ -97,7 +97,7 @@ strong, b {
 	background-clip: padding-box;
 	text-shadow:.05em .05em .1em rgba(0,0,0,.4);
 	color: white;
-	color: lime;
+	color: #fff;
 	border:30px solid transparent;
 }
 
