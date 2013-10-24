@@ -116,7 +116,7 @@
     <header class="architecture slide"></header>
 
     <section class="slide">
-        <h2>Core</h2>
+        <h2>core</h2>
         <pre><code lang="javascript">{
     module: function () {
         /* inject sandbox */
@@ -129,7 +129,7 @@
     </section>
 
     <section class="slide">
-        <h2>Sandbox</h2>
+        <h2>sandbox</h2>
         <pre><code lang="javascript">{
     router: { /* Router */ },
 
@@ -140,7 +140,7 @@
     </section>
 
     <section class="slide">
-        <h2>App</h2>
+        <h2>app</h2>
         <pre><code lang="javascript">function MyApp ( framework ) {
     framework.module( myModule );
 }
@@ -153,7 +153,7 @@ function myModule ( sandbox ) {
 
 <section>
 	    <section class="slide">
-        <h2>Differences Core</h2>
+        <h2><strong>differences</strong>: core</h2>
         <pre><code lang="javascript">// server
 function module ( module ) {
     var sandbox = /* sandbox server */;
@@ -167,7 +167,7 @@ function module ( module ) {
     </section>
 
     <section class="slide">
-        <h2>Differences Core</h2>
+        <h2><strong>differences</strong>: core</h2>
         <pre><code lang="javascript">// server
 function templates ( templatesDir ) {
     // load files
@@ -179,7 +179,7 @@ function templates ( templatesDir ) {
     </section>
 
     <section class="slide">
-        <h2>Differences Core</h2>
+        <h2><strong>differences</strong>: core</h2>
         <pre><code lang="javascript">// server
 function run ( port ) {
     // start server
@@ -193,7 +193,7 @@ function run () {
     </section>
 
     <section class="slide">
-        <h2>Differences Sandbox</h2>
+        <h2><strong>differences</strong>: sandbox</h2>
         <pre><code lang="javascript">// server
 router.get = function ( pattern, callback ) {
     // register callback on express.js
@@ -208,7 +208,7 @@ router.get = function ( pattern, callback ) {
     </section>
 
     <section class="slide">
-        <h2>Differences Sandbox</h2>
+        <h2><strong>differences</strong>: sandbox</h2>
         <pre><code lang="javascript">// server
 templates.render = function ( name, data ) {
     var template = templates[ name ];
@@ -224,7 +224,7 @@ templates.render = function ( name, data ) {
     </section>
 
     <section class="slide">
-        <h2>Differences Sandbox</h2>
+        <h2><strong>differences</strong>: sandbox</h2>
         <pre><code lang="javascript">// server
 http.get = function ( url, callback ) {
     nodeHttp.get( url, function( res ) {
@@ -241,7 +241,7 @@ http.get = function ( url, callback ) {
     </section>
 
     <section class="slide">
-        <h2>differences <strong>sandbox</strong></h2>
+        <h2><strong>differences</strong>: sandbox</h2>
         <pre><code lang="javascript">// browser
 http.get = function ( url, callback ) {
     $.get( url ).done( function ( data ) {
@@ -257,11 +257,11 @@ http.get = function ( url, callback ) {
     </section>
 
     <header class="slide">
-		<h1>differences <strong>module</strong></h1>
+		<h1><strong>differences</strong>: module</h1>
     </header>
 
     <header class="slide">
-		<h1><span class="erase">differences</span> <strong>module</strong></h1>
+    	<h1><strong class="erase">differences</strong>: module</h1>
     </header>
 
 </section>
