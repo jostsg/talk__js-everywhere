@@ -1,20 +1,10 @@
 html {
     background-image: -webkit-radial-gradient(bottom, rgb(241,71,61), rgb(255,100,92));
     -webkit-background-size: cover;
-    /*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2F2727), to(#1a82f7));*/
-    /*background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px;*/
-}
-
-section > header.chapter {
-    background: none;
-    color: #000;
-    background-color: #fff;
+    background-image: 
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
 }
 
 .jik {
@@ -40,13 +30,14 @@ section > header.chapter {
 .browser {
     background: url('img/browser.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
-    color: #fff;
+    color: #c3c3c3;
 }
 
 .google {
     background: url('img/google.jpg') no-repeat center center fixed;
+    background-color: #fff; 
     -webkit-background-size: cover;
-    color: #fff;
+    color: #c3c3c3;
 }
 
 .library {
@@ -74,7 +65,7 @@ section > header.chapter {
     -webkit-background-size: cover;
 }
     section > header.power > h1 {
-        color: #fff;
+        color: #c3c3c3;
         position: absolute;
         top: auto;
         left: auto;
@@ -85,7 +76,7 @@ section > header.chapter {
 
 .slow > h1, .browser > h1, .share > h1, .demo > h1, .google > h1 {
     background: rgba(0,0,0,.9);
-    color: #fff;
+    color: #c3c3c3;
 }
 
 .quote {
@@ -119,5 +110,20 @@ section > header.chapter {
     }
 
 .erase {
-    text-decoration: line-through;
+    position: relative;
+}
+.erase:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 20px solid;
+    border-color: red;
+
+    -webkit-transform:rotate(-5deg);
+    -moz-transform:rotate(-5deg);
+    -ms-transform:rotate(-5deg);
+    -o-transform:rotate(-5deg);
+    transform:rotate(-5deg);
 }
